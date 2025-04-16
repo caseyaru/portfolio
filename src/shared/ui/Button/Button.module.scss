@@ -1,0 +1,62 @@
+.button {
+  background-color: $white;
+  gap: 10px;
+  border-radius: 8px;
+  border: none;
+  font-family: $ff-base;
+  // color: $primary;
+  // border: 1px solid $primary;
+  @include set-font-size(14px, 600, 24px);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  @extend %block-centered;
+  width: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: $transition-standart;
+
+  &:disabled {
+    background-color: transparent;
+    cursor: not-allowed;
+    border-color: $ui-border;
+    color: $ui-border;
+  }
+
+  &_colored {
+  }
+  &_colored:hover {
+  }
+  &_colored:focus:not(:hover) {
+  }
+
+  &_link {
+    @include set-font-size(15px, 600, 20px);
+    text-wrap: nowrap;
+
+    background-color: transparent;
+    border: none;
+    text-transform: none;
+    letter-spacing: 0;
+
+    opacity: 1;
+    transition: $transition-standart;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &_large {
+    padding: 16px 0;
+  }
+
+  &_small {
+    padding: 10px 31.5px 6px;
+  }
+}
+
+.disabled {
+  background-color: $ui-border;
+  border-color: $ui-border;
+  pointer-events: none;
+}
