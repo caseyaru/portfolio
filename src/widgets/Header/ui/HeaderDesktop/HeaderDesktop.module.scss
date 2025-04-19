@@ -1,0 +1,27 @@
+.block {
+  @extend %flex-row;
+  align-items: center;
+  gap: 100px;
+
+  &_right {
+    @extend %flex-row;
+    align-items: center;
+    gap: 35px;
+  }
+}
+
+.links {
+  @extend %flex-row;
+  align-items: center;
+  gap: 30px;
+}
+
+.contacts {
+  @extend %flex-row;
+  align-items: center;
+  gap: 12px;
+
+  &_icon {
+    @include set-block-size(24px, 24px);
+  }
+}

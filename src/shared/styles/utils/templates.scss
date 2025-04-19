@@ -1,0 +1,51 @@
+%block-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+%button-default {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+%text-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%img-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+%img-contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+%container {
+  max-width: calc($container-width-desk + $padding-mobile * 2);
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
+}

@@ -1,0 +1,105 @@
+.link {
+  transition: $transition-standart;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &_clear {
+    font-size: inherit;
+  }
+
+  &_active {
+    font-weight: 700 !important;
+  }
+
+  &_disabled {
+    cursor: default !important;
+    opacity: 0.7 !important;
+  }
+
+  &_default {
+    gap: 10px;
+    border-radius: 8px;
+    font-family: $ff-base;
+    @include set-font-size(16px, 600, 24px);
+    @extend %block-centered;
+    max-width: 359px;
+    // background-color: $white;
+    // border: 1px solid $primary;
+    // color: $primary;
+    &:hover {
+      // background-color: $white;
+      // border-color: $primary;
+      // color: $primary;
+      // opacity: 1;
+    }
+  }
+
+  &_colored {
+    gap: 10px;
+    border-radius: 8px;
+    padding: 16px 0;
+    font-family: $ff-base;
+    @include set-font-size(16px, 600, 24px);
+    @extend %block-centered;
+    max-width: 359px;
+    // background-color: $primary;
+    // color: $white;
+  }
+  &_colored:hover {
+    // background-color: $primary-dark;
+    // color: $white;
+    // opacity: 1;
+  }
+  &_colored:active {
+    // background-color: $light;
+    // border: 1px solid $primary;
+    // color: $primary;
+  }
+
+  &_header {
+    color: $black;
+    font-family: $ff-base;
+    @include set-font-size(14px, 400, 18.2px);
+    @include max-point(md) {
+      padding: 20px;
+    }
+  }
+
+  &_footer {
+    // color: $textdark;
+    @include set-font-size(14px, 400, 15.6px);
+    font-family: $ff-base;
+  }
+
+  &_text {
+    @include set-font-size(15px, 600, 20px);
+    text-wrap: nowrap;
+
+    background-color: transparent;
+    border: none;
+    text-transform: none;
+    letter-spacing: 0;
+
+    opacity: 1;
+    transition: $transition-standart;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &_normal {
+    padding: 0;
+  }
+  &_large {
+    padding: 16px 0;
+  }
+  &_small {
+    padding: 5px 10px;
+    border-radius: 4px;
+    @include set-font-size(12px, 500, 15.6px);
+  }
+}

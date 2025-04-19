@@ -1,0 +1,76 @@
+@mixin set-font-size($size, $weight: 400, $line) {
+  font-size: rem($size);
+  line-height: $line;
+  font-weight: $weight;
+}
+
+@mixin set-block-size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin set-bg-cover-center($url) {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url($url);
+}
+
+@mixin set-bg-cover-left($url) {
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  background-image: url($url);
+}
+
+@mixin set-bg-contain-center($url) {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url($url);
+}
+
+@mixin set-border($color, $width: 1px, $style: solid, $radius: $border-radius) {
+  border-radius: $radius;
+  border: $width $style $color;
+}
+
+@mixin set-text-lines($lines) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+@mixin no-border {
+  border: none;
+  outline: none;
+}
+
+@mixin min-point($point) {
+  @if map-has-key($breakpoints, $point) {
+    @media (min-width: map-get($breakpoints, $point)) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$point}.";
+  }
+}
+
+@mixin max-point($point) {
+  @if map-has-key($breakpoints, $point) {
+    @media (max-width: calc(map-get($breakpoints, $point) - 1px)) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$point}.";
+  }
+}
+
+@mixin min-max-point($min_point, $max_point) {
+  @include min-point($min_point) {
+    @include max-point-1($max_point) {
+      @content;
+    }
+  }
+}

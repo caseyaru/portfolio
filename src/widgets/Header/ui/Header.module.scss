@@ -1,0 +1,18 @@
+.header {
+  background-color: $white;
+  padding: 13px 0 12px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  @include max-point(lg) {
+    padding: 12px $padding-mobile;
+  }
+
+  &__content {
+    @extend %flex-row;
+    align-items: center;
+    justify-content: space-between;
+    @extend %container;
+  }
+}
