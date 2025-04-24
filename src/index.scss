@@ -16,6 +16,7 @@ main {
 }
 
 body {
+  font-family: $ff-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -23,6 +24,10 @@ body {
     overflow: hidden;
     padding-right: 17px;
   }
+}
+
+h1 {
+  font-family: $ff-heading;
 }
 
 * {
