@@ -1,0 +1,38 @@
+.block {
+    padding: 40px 0;
+    @extend %container;
+    @extend %flex-row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.text {
+    width: 100%;
+    @extend %flex-column;
+    gap: 1.5rem;
+    color: $light-text;
+}
+
+.image {
+    max-width: 60%;
+    width: 100%;
+    @extend %flex-row;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+        max-width: 300px;
+        border-radius: 50%;
+    }
+}
+
+.span {
+    color: $blue;
+    font-style: italic;
+}
+
+.link {
+    color: $violet;
+    font-weight: 600;
+}
