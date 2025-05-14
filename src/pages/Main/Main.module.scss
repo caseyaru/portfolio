@@ -1,5 +1,8 @@
 .content {
-    &_light {
-        background-color: $light;
-    }
+  &_light {
+    background-color: $light;
+  }
+  &_purple {
+    background-color: $purple;
+  }
 }

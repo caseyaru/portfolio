@@ -1,0 +1,12 @@
+.block {
+  padding: 40px 0;
+  @extend %container;
+  @extend %flex-column;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+
+  & h2 {
+    color: $light-text;
+  }
+}
