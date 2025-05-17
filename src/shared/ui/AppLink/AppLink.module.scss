@@ -60,7 +60,8 @@
   }
 
   &_header {
-    color: $black;
+    color: $light-text;
+    font-weight: 600;
     font-family: $ff-base;
     @include set-font-size(14px, 400, 18.2px);
     @include max-point(md) {
