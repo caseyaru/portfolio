@@ -1,0 +1,23 @@
+.footer {
+  background-color: $violet;
+  border-radius: 40px 40px 0 0;
+  color: $white;
+}
+
+.content {
+  padding: 40px 0 30px;
+  @extend %container;
+  @extend %flex-row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  & p {
+    @include set-font-size(18px, 400, 15.6px);
+    font-family: $ff-base;
+  }
+}
+
+.separator {
+  width: fit-content;
+}

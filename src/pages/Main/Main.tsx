@@ -12,14 +12,10 @@ function Main() {
       <Header />
       <div className={styles.content_light}>
         <About />
-      </div>
-      <div className={styles.content_purple}>
         <Stack />
-      </div>
-      <div className={styles.content_light}>
         <Projects />
-      </div>
       <Footer />
+      </div>
     </div>
   );
 }
