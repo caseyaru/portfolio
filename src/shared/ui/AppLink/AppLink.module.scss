@@ -60,6 +60,9 @@
   }
 
   &_header {
+    background-color: $purple;
+    padding: 3px 6px !important;
+    border-radius: 6px;
     color: $light-text;
     font-weight: 600;
     font-family: $ff-base;
@@ -71,7 +74,7 @@
 
   &_footer {
     // color: $textdark;
-    @include set-font-size(14px, 400, 15.6px);
+    @include set-font-size(18px, 400, 15.6px);
     font-family: $ff-base;
   }
 
